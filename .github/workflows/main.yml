@@ -1,0 +1,40 @@
+on:
+  workflow_run:
+    workflows:
+      - 'Build iOS Framework'
+    types:
+      - completed
+
+permissions:
+  contents: write
+  
+jobs:
+  copy-folder:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Source Repository
+        uses: actions/checkout@v2
+        with:
+          repository: veeraagam/CalendarControl
+          ref: ${{ github.event.workflow_run.head_commit.id }}
+      
+      - name: Pushes test file
+        uses: dmnemec/copy_file_to_another_repo_action@main
+        env:
+          API_TOKEN_GITHUB: ${{ secrets.API_KEY }}
+        with:
+          source_file: 'build/CalendarControl.xcframework/Info.plist'
+          user_name: 'sudhanshublah'
+          destination_repo: 'sudhanshublah/improved-train'
+          destination_folder: 'Sources/'
+          user_email: 'sudhanshuk1219@gmail.com'
+          commit_message: 'A custom message for the commit'
+    
+    
+    
+#         # Commit and push changes
+#           cd destination
+#           git add .
+#           git commit -m "Copy framework folder from source repository"
+#           git push origin main

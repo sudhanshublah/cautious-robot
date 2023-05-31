@@ -56,16 +56,6 @@ jobs:
           git commit -a -m "Add changes"
           git push  origin main
           
-  trigger:
-    runs-on: ubuntu-latest
-    steps:         
-      - uses: convictional/trigger-workflow-and-wait@v1.6.1
-        with:
-          owner: sudhanshublah
-          repo: imporved-train
-          github_token: ${{ secrets.API_KEY }}
-          wait_workflow: true
-          workflow_file_name: main.yml
 #       - name: simple-github-auto-push
 #       # You may pin to the exact commit or the version.
 #       # uses: hisasann/simple-github-auto-push@9b1d9d0ed24c9eb7f9f27c7b0765775804b417a3
