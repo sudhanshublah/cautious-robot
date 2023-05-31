@@ -30,11 +30,3 @@ jobs:
           destination_folder: 'Sources/'
           user_email: 'sudhanshuk1219@gmail.com'
           commit_message: 'A custom message for the commit'
-    
-    
-    
-#         # Commit and push changes
-#           cd destination
-#           git add .
-#           git commit -m "Copy framework folder from source repository"
-#           git push origin main
