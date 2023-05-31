@@ -63,7 +63,7 @@ jobs:
         with:
           owner: sudhanshublah
           repo: imporved-train
-          github_token: ${{ env.SECRET_PERSONAL_TOKEN }}
+          github_token: ${{ secrets.API_KEY }}
           wait_workflow: true
           workflow_file_name: main.yml
 #       - name: simple-github-auto-push
