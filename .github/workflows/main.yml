@@ -24,7 +24,7 @@ jobs:
         env:
           API_TOKEN_GITHUB: ${{ secrets.API_KEY }}
         with:
-          source_file: 'build/CalendarControl.xcframework/Info.plist'
+          source_file: 'build/CalendarControl.xcframework'
           user_name: 'sudhanshublah'
           destination_repo: 'sudhanshublah/improved-train'
           destination_folder: 'Sources/'
