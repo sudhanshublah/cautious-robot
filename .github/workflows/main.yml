@@ -16,7 +16,7 @@ jobs:
       - name: Checkout Source Repository
         uses: actions/checkout@v2
         with:
-          repository: veeraagam/CalendarControl
+          repository: sudhanshublah/cautious-robot
           ref: ${{ github.event.workflow_run.head_commit.id }}
       
       - name: Pushes test file
