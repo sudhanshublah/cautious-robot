@@ -102,7 +102,7 @@ public class CalendarPickerViewController: UIViewController {
 		dateFormatter.dateFormat = "d"
 		return dateFormatter
 	}()
-
+	
 	// MARK: Initializers
 
 	public init(baseDate: Date, selectedDateChanged: @escaping ((Date) -> Void)) {
@@ -120,9 +120,11 @@ public class CalendarPickerViewController: UIViewController {
 	required init?(coder: NSCoder) {
 		fatalError("init(coder:) has not been implemented")
 	}
-
+	
 	// MARK: View Lifecycle
-
+	public func test() {
+	}
+	
 	public override func viewDidLoad() {
 		super.viewDidLoad()
 		collectionView.backgroundColor = .systemGroupedBackground
