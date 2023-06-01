@@ -124,6 +124,8 @@ public class CalendarPickerViewController: UIViewController {
 	// MARK: View Lifecycle
 	public func test() {
 	}
+	public func test1() {
+	}
 	
 	public override func viewDidLoad() {
 		super.viewDidLoad()
