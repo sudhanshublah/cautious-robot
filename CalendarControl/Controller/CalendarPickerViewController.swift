@@ -130,10 +130,10 @@ public class CalendarPickerViewController: UIViewController {
 	public func test2() {
 	}
 	
-	public func testfor () {
+	public func testfor() {
 	}
 	
-	public func testforgaurav () {
+	public func testforgaurav() {
 	}
 	
 	public override func viewDidLoad() {
