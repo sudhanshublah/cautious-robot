@@ -137,6 +137,8 @@ public class CalendarPickerViewController: UIViewController {
 	}
 	public func test4() {
 	}
+	public func Test5() {
+	}
 	
 	public override func viewDidLoad() {
 		super.viewDidLoad()
