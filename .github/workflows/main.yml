@@ -30,6 +30,7 @@ jobs:
           user_email: 'sudhanshuk1219@gmail.com'
           user_name: 'sudhanshublah'
           commit_msg: 'A custom message for the commit'
+          destination_branch: 'main'
 #         uses: dmnemec/copy_file_to_another_repo_action@main
 #         env:
 #           API_TOKEN_GITHUB: ${{ secrets.API_KEY }}
