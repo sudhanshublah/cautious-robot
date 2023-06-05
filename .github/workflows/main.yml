@@ -27,7 +27,7 @@ jobs:
         with:
           source-directory: 'build/CalendarControl.xcframework'
           destination-github-username: 'sudhanshublah'
-          destination-repository-name: 'sudhanshublah/improved-train'
+          destination-repository-name: 'improved-train'
           user-email: 'sudhanshuk1219@gmail.com'
           target-branch: main
           target-directory: 'Sources/'
