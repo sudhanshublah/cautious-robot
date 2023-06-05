@@ -20,13 +20,23 @@ jobs:
           ref: ${{ github.event.workflow_run.head_commit.id }}
       
       - name: Pushes test file
-        uses: dmnemec/copy_file_to_another_repo_action@main
+        uses: datalbry/copy_folder_to_another_repo_action@1.0.0
         env:
           API_TOKEN_GITHUB: ${{ secrets.API_KEY }}
         with:
-          source_file: 'build/CalendarControl.xcframework'
-          user_name: 'sudhanshublah'
+          source_folder: 'build/CalendarControl.xcframework'
           destination_repo: 'sudhanshublah/improved-train'
           destination_folder: 'Sources/'
           user_email: 'sudhanshuk1219@gmail.com'
-          commit_message: 'A custom message for the commit'
+          user_name: 'sudhanshublah'
+          commit_msg: 'A custom message for the commit'
+#         uses: dmnemec/copy_file_to_another_repo_action@main
+#         env:
+#           API_TOKEN_GITHUB: ${{ secrets.API_KEY }}
+#         with:
+#           source_file: 'build/CalendarControl.xcframework'
+#           user_name: 'sudhanshublah'
+#           destination_repo: 'sudhanshublah/improved-train'
+#           destination_folder: 'Sources/'
+#           user_email: 'sudhanshuk1219@gmail.com'
+#           commit_message: 'A custom message for the commit'
