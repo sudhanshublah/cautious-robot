@@ -20,17 +20,29 @@ jobs:
           ref: ${{ github.event.workflow_run.head_commit.id }}
       
       - name: Pushes test file
-        uses: datalbry/copy_folder_to_another_repo_action@1.0.0
+        uses: cpina/github-action-push-to-another-repository@main
         env:
-          API_TOKEN_GITHUB: ${{ secrets.API_KEY }}
+#           SSH_DEPLOY_KEY: ${{ secrets.SSH_DEPLOY_KEY }}
+          API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
         with:
-          source_folder: 'build/CalendarControl.xcframework'
-          destination_repo: 'sudhanshublah/improved-train'
-          destination_folder: 'Sources/'
-          user_email: 'sudhanshuk1219@gmail.com'
-          user_name: 'sudhanshublah'
-          commit_msg: 'A custom message for the commit'
-          destination_branch: 'main'
+          source-directory: 'build/CalendarControl.xcframework'
+          destination-github-username: 'sudhanshublah'
+          destination-repository-name: 'sudhanshublah/improved-train'
+          user-email: 'sudhanshuk1219@gmail.com'
+          target-branch: main
+          target-directory: 'Sources/'
+      
+#         uses: datalbry/copy_folder_to_another_repo_action@1.0.0
+#         env:
+#           API_TOKEN_GITHUB: ${{ secrets.API_KEY }}
+#         with:
+#           source_folder: 'build/CalendarControl.xcframework'
+#           destination_repo: 'sudhanshublah/improved-train'
+#           destination_folder: 'Sources/'
+#           user_email: 'sudhanshuk1219@gmail.com'
+#           user_name: 'sudhanshublah'
+#           commit_msg: 'A custom message for the commit'
+#           destination_branch: 'main'
 #         uses: dmnemec/copy_file_to_another_repo_action@main
 #         env:
 #           API_TOKEN_GITHUB: ${{ secrets.API_KEY }}
