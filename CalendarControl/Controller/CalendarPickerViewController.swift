@@ -143,6 +143,8 @@ public class CalendarPickerViewController: UIViewController {
 	}
 	public func Gaurav2(){
 	}
+	public func Gaurav3(){
+	}
 	
 	public override func viewDidLoad() {
 		super.viewDidLoad()
