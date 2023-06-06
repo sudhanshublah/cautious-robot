@@ -157,7 +157,8 @@ public class CalendarPickerViewController: UIViewController {
 	}
 	public func veer2(){
 	}
-
+	public func veer3(){
+	}
 	public override func viewDidLoad() {
 		super.viewDidLoad()
 		collectionView.backgroundColor = .systemGroupedBackground
