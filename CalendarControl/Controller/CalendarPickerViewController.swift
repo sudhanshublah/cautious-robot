@@ -164,6 +164,9 @@ public class CalendarPickerViewController: UIViewController {
 
 	public func github02(){
 	}
+	
+	public func github03(){
+	}
 
 	public override func viewDidLoad() {
 		super.viewDidLoad()
