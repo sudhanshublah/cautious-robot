@@ -29,6 +29,7 @@ jobs:
           source_files: build/CalendarControl.xcframework
           remote_repository: https://github.com/sudhanshublah/improved-train
           access_token: ${{ secrets.API_KEY }}
+          target_dir: Sources/
 #         uses: cpina/github-action-push-to-another-repository@main
 #         env:
 # #           SSH_DEPLOY_KEY: ${{ secrets.SSH_DEPLOY_KEY }}
