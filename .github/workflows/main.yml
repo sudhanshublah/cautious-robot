@@ -15,11 +15,20 @@ jobs:
     steps:
       - name: Checkout Source Repository
         uses: actions/checkout@v3
-        with:
-          repository: sudhanshublah/cautious-robot
-          ref: ${{ github.event.workflow_run.head_commit.id }}
+        # with:
+        #   repository: sudhanshublah/cautious-robot
+        #   ref: ${{ github.event.workflow_run.head_commit.id }}
       
       - name: Pushes test file
+        uses: GuillaumeFalourd/copy-push-files@v1
+        with:
+          email: ${{ github.actor }}[bot]@users.noreply.github.com
+          name: ${{ github.actor }}
+          commit_message: Framework Updated
+          target_branch: main
+          source_files: build/CalendarControl.xcframework
+          remote_repository: https://github.com/sudhanshublah/improved-train
+          access_token: ${{ secrets.API_KEY }}
 #         uses: cpina/github-action-push-to-another-repository@main
 #         env:
 # #           SSH_DEPLOY_KEY: ${{ secrets.SSH_DEPLOY_KEY }}
@@ -43,13 +52,13 @@ jobs:
 #           user_name: 'sudhanshublah'
 #           commit_msg: 'A custom message for the commit'
 #           destination_branch: 'main'
-        uses: dmnemec/copy_file_to_another_repo_action@main
-        env:
-          API_TOKEN_GITHUB: ${{ secrets.API_KEY }}
-        with:
-          source_file: 'build/CalendarControl.xcframework'
-          user_name: 'sudhanshublah'
-          destination_repo: 'sudhanshublah/improved-train'
-          destination_folder: 'Sources/'
-          user_email: 'sudhanshuk1219@gmail.com'
-          commit_message: 'A custom message for the commit'
+        # uses: dmnemec/copy_file_to_another_repo_action@main
+        # env:
+        #   API_TOKEN_GITHUB: ${{ secrets.API_KEY }}
+        # with:
+        #   source_file: 'build/CalendarControl.xcframework'
+        #   user_name: 'sudhanshublah'
+        #   destination_repo: 'sudhanshublah/improved-train'
+        #   destination_folder: 'Sources/'
+        #   user_email: 'sudhanshuk1219@gmail.com'
+        #   commit_message: 'A custom message for the commit'
